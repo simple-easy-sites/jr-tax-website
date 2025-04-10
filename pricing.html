@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JR Tax Preparation - Pricing and Cost Estimation">
+    <title>Pricing | JR Tax Preparation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>JR Tax Preparation</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">IRS and CT Info</a></li>
+                        <li><a href="#">Secure Document Transfer</a></li>
+                        <li><a href="processing.html">Processing</a></li>
+                        <li><a href="pricing.html" class="active">Pricing</a></li>
+                        <li><a href="#">DIY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Tax Preparation Pricing</h1>
+                <p>Fair and transparent pricing for all your tax preparation needs</p>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <div class="container">
+                <div class="premium-card">
+                    <h2>Estimate the cost of processing your return</h2>
+                    <p class="overview-text">Use our calculator to get an instant estimate based on your filing situation and specific tax needs.</p>
+                
+                    <div class="calculator-container">
+                        <div class="calculator-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="calculated-value">Calculated Value</label>
+                                    <div class="calculated-value">
+                                        <span id="calculated-value">$0</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state-taxes">State Taxes to file</label>
+                                    <div class="select-wrapper">
+                                        <select id="state-taxes" class="form-control">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <span class="form-hint">Usually just 1</span>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <label class="form-section-label">Select your Filing Method<span class="required">*</span></label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="radio" id="single" name="filing-method" value="single" checked>
+                                        <label for="single">Single</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="radio" id="married-separate" name="filing-method" value="married-separate">
+                                        <label for="married-separate">Married Separate</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="radio" id="married-joint" name="filing-method" value="married-joint">
+                                        <label for="married-joint">Married Joint</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="radio" id="head-household" name="filing-method" value="head-household">
+                                        <label for="head-household">Head of Household</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <label class="form-section-label">Check All That Apply<span class="required">*</span></label>
+                                <div class="checkbox-grid">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="education-expense" name="tax-items" value="education-expense">
+                                        <label for="education-expense">Education expense</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="mort-interest" name="tax-items" value="mort-interest">
+                                        <label for="mort-interest">Mort interest</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="property-taxes" name="tax-items" value="property-taxes">
+                                        <label for="property-taxes">Property Taxes</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="sale-of-home" name="tax-items" value="sale-of-home">
+                                        <label for="sale-of-home">Sale of Home</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="child-care" name="tax-items" value="child-care">
+                                        <label for="child-care">Child Care</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="chile-tax-credit" name="tax-items" value="chile-tax-credit">
+                                        <label for="chile-tax-credit">Chile Tax Credit</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="eic" name="tax-items" value="eic">
+                                        <label for="eic">EIC</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="adoption" name="tax-items" value="adoption">
+                                        <label for="adoption">Adoption</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="business-simple" name="tax-items" value="business-simple">
+                                        <label for="business-simple">Business Simple</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="business-complex" name="tax-items" value="business-complex">
+                                        <label for="business-complex">Business Complex</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="rental-property" name="tax-items" value="rental-property">
+                                        <label for="rental-property">Rental Property</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="teacher-expenses" name="tax-items" value="teacher-expenses">
+                                        <label for="teacher-expenses">Teacher Expenses</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="form-section-label">Select the number of forms you have:</p>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="w2s">W2's</label>
+                                    <div class="select-wrapper">
+                                        <select id="w2s" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="int-div-forms">Int and Div Forms</label>
+                                    <div class="select-wrapper">
+                                        <select id="int-div-forms" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="misc-1099">1099-Misc</label>
+                                    <div class="select-wrapper">
+                                        <select id="misc-1099" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="r-1099">1099R</label>
+                                    <div class="select-wrapper">
+                                        <select id="r-1099" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="inv-simple">Investment Statements (Simple)</label>
+                                    <div class="select-wrapper">
+                                        <select id="inv-simple" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <span class="form-hint">&lt; than 5 buys and Sells</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inv-large">Investment Statements (Large)</label>
+                                    <div class="select-wrapper">
+                                        <select id="inv-large" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <span class="form-hint">Large number of Buys and sells</span>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="unemployment-forms">Unemployment Forms</label>
+                                    <div class="select-wrapper">
+                                        <select id="unemployment-forms" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="health-savings">Health Savings Forms</label>
+                                    <div class="select-wrapper">
+                                        <select id="health-savings" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="ira-roth">IRA/Roth Statements</label>
+                                    <div class="select-wrapper">
+                                        <select id="ira-roth" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chet-statements">CHET Statements</label>
+                                    <div class="select-wrapper">
+                                        <select id="chet-statements" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-3">
+                                <div class="form-group">
+                                    <label for="social-security">Social Security Statements</label>
+                                    <div class="select-wrapper">
+                                        <select id="social-security" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="student-loan">Student Loan Forms</label>
+                                    <div class="select-wrapper">
+                                        <select id="student-loan" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group centered-form-group">
+                                <label for="health-care-forms">1095A Health Care Forms</label>
+                                <div class="select-wrapper">
+                                    <select id="health-care-forms" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="calculator-action">
+                                <button id="calculate-btn" class="btn btn-primary">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-benefits">
+            <div class="container">
+                <div class="section-header premium-header">
+                    <h2>Why Choose Our Tax Preparation Services</h2>
+                    <p>We offer exceptional value with competitive pricing and unmatched expertise</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Time-Saving</h3>
+                        <p>We'll handle the complexities of tax preparation, saving you hours of research and work.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path>
+                                <path d="M12 10v6"></path>
+                                <rect x="9" y="10" width="6" height="6" rx="1"></rect>
+                                <path d="M15 6H9"></path>
+                            </svg>
+                        </div>
+                        <h3>Maximized Returns</h3>
+                        <p>Our experts will find every eligible deduction and credit to ensure you get the maximum refund possible.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Peace of Mind</h3>
+                        <p>Our dedicated professionals ensure accuracy and compliance with all tax regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Contact us today to begin your tax preparation process or to ask any questions.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:jrtaxprep@outlook.com" class="btn btn-primary">Email Us</a>
+                        <a href="tel:8604841952" class="btn btn-secondary">Call Us: 860-484-1952</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>JR Tax Preparation</h3>
+                    <p>214 Prospect St, Thomaston, CT 06787</p>
+                    <p>Phone: <a href="tel:8604841952">860-484-1952</a> | Email: <a href="mailto:jrtaxprep@outlook.com">jrtaxprep@outlook.com</a></p>
+                </div>
+                <div class="footer-cta">
+                    <a href="mailto:jrtaxprep@outlook.com" class="btn btn-primary">Email Us</a>
+                    <a href="tel:8604841952" class="btn btn-secondary">Call Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculate-btn');
+            const calculatedValue = document.getElementById('calculated-value');
+            
+            // Base rates
+            const filingMethodRates = {
+                'single': 58,
+                'married-separate': 88,
+                'married-joint': 98,
+                'head-household': 78
+            };
+            
+            // Additional rates per item
+            const additionalRates = {
+                'education-expense': 15,
+                'mort-interest': 10,
+                'property-taxes': 10,
+                'sale-of-home': 50,
+                'child-care': 20,
+                'chile-tax-credit': 15,
+                'eic': 10,
+                'adoption': 30,
+                'business-simple': 75,
+                'business-complex': 150,
+                'rental-property': 75,
+                'teacher-expenses': 15
+            };
+            
+            // Rates per form
+            const formRates = {
+                'w2s': 5,
+                'int-div-forms': 5,
+                'misc-1099': 10,
+                'r-1099': 5,
+                'inv-simple': 15,
+                'inv-large': 30,
+                'unemployment-forms': 10,
+                'health-savings': 15,
+                'ira-roth': 10,
+                'chet-statements': 10,
+                'social-security': 5,
+                'student-loan': 5,
+                'health-care-forms': 20
+            };
+            
+            // Additional cost per state
+            const additionalStateRate = 25;
+            
+            calculateBtn.addEventListener('click', function() {
+                let total = 0;
+                
+                // Get filing method rate
+                const filingMethod = document.querySelector('input[name="filing-method"]:checked').value;
+                total += filingMethodRates[filingMethod];
+                
+                // Get additional items
+                const selectedItems = document.querySelectorAll('input[name="tax-items"]:checked');
+                selectedItems.forEach(item => {
+                    total += additionalRates[item.value] || 0;
+                });
+                
+                // Get form amounts
+                for (const [formId, rate] of Object.entries(formRates)) {
+                    const quantity = parseInt(document.getElementById(formId).value);
+                    total += quantity * rate;
+                }
+                
+                // Calculate state tax cost
+                const stateTaxes = parseInt(document.getElementById('state-taxes').value);
+                if (stateTaxes > 1) {
+                    total += (stateTaxes - 1) * additionalStateRate;
+                }
+                
+                // Update the calculated value
+                calculatedValue.textContent = '$' + total;
+            });
+        });
+    </script>
+</body>
+</html> 
