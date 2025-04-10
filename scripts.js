@@ -51,28 +51,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add animations for elements on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.info-card, .service-locations li, .countdown-number, .map-container, .certification-badges');
+        const elements = document.querySelectorAll('.info-card, .service-locations li, .countdown-number, .map-container, .certification-badges, .process-card.premium-effect, .service-card-premium');
         
-        elements.forEach(element => {
+        elements.forEach((element, index) => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
             
             if (elementPosition < windowHeight - 50) {
-                element.style.opacity = '1';
-                element.style.transform = element.classList.contains('map-container') ? 'translateY(0)' : 
-                                           element.classList.contains('certification-badges') ? 'translateY(0)' : 
-                                           'translateY(0)';
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = element.classList.contains('map-container') ? 'translateY(0)' : 
+                                               element.classList.contains('certification-badges') ? 'translateY(0)' : 
+                                               element.classList.contains('process-card') || element.classList.contains('service-card-premium') ? 'translateY(0)' :
+                                               'translateY(0)';
+                }, element.classList.contains('service-card-premium') ? index * 150 : 0); // Stagger service cards animation
             }
         });
     };
     
     // Set initial state for animated elements
-    document.querySelectorAll('.info-card, .service-locations li, .countdown-number, .map-container, .certification-badges').forEach(element => {
+    document.querySelectorAll('.info-card, .service-locations li, .countdown-number, .map-container, .certification-badges, .process-card.premium-effect, .service-card-premium').forEach(element => {
         element.style.opacity = '0';
         element.style.transform = element.classList.contains('map-container') ? 'translateY(30px)' : 
                                    element.classList.contains('certification-badges') ? 'translateX(' + (element.parentElement.children[0] === element ? '-20px' : '20px') + ')' : 
+                                   element.classList.contains('process-card') || element.classList.contains('service-card-premium') ? 'translateY(40px)' :
                                    'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     });
     
     // Run animation check on load and scroll
